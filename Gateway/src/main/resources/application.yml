@@ -26,11 +26,11 @@ spring:
           filters:
             - StripPrefix=1
         - id: restaurant
-            uri: lb://restaurant
-            predicates:
-              - Path=/restaurant/**
-            filters:
-              - StripPrefix=1
+          uri: lb://restaurant
+          predicates:
+            - Path=/restaurant/**
+          filters:
+            - StripPrefix=1
 
 info:
   app:
