@@ -16,19 +16,25 @@ spring:
         - id: user
           uri:  lb://user
           predicates:
-            - Path=/user/**
+            - Path=/user-service/**
           filters:
             - StripPrefix=1
         - id: order
           uri:  lb://order
           predicates:
-            - Path=/order/**
+            - Path=/order-service/**
           filters:
             - StripPrefix=1
         - id: restaurant
           uri: lb://restaurant
           predicates:
-            - Path=/restaurant/**
+            - Path=/restaurant-service/**
+          filters:
+            - StripPrefix=1
+        - id: authentication
+          uri: lb://authentication
+          predicates:
+            - Path=/authentication-service/**
           filters:
             - StripPrefix=1
 
