@@ -46,7 +46,7 @@ info:
 eureka:
   client:
     service-url:
-     defaultZone: http://eureka:8761/eureka
+     defaultZone: http://docker.for.mac.host.internal:8761/eureka
     healthcheck:
       enabled: true
     register-with-eureka: true
