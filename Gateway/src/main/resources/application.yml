@@ -6,15 +6,14 @@ spring:
     name: gateway
   cloud:
     gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
       globalcors:
         cors-configurations:
           '[/**]':
             allowedOrigins: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
+            allowedMethods: "*"
+            allowedHeaders: "*"
       routes:
         - id: eureka
           uri: lb://registry
