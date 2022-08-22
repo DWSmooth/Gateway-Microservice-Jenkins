@@ -39,6 +39,12 @@ spring:
             - Path=/restaurant-service/**
           filters:
             - StripPrefix=1
+        - id: driver
+          uri: lb://driver
+          predicates:
+            - Path=/driver-service/**
+          filters:
+            - StripPrefix=1
         - id: authentication
           uri: lb://authentication
           predicates:
