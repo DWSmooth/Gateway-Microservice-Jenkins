@@ -1,4 +1,4 @@
-FROM openjdk:17-oracle
+FROM openjdk:11-oracle
 LABEL MAINTAINER = "MegaBytes"
 # for volume mapping from container to host OS
 VOLUME /tmp
